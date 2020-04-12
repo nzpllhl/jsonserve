@@ -1,0 +1,335 @@
+{
+  "users": [
+    {
+      "name": "龙",
+      "age": "18",
+      "phone": "22-33-44",
+      "email": "443812682",
+      "id": 1,
+      "companyId": 1
+    },
+    {
+      "name": "妞妞",
+      "age": "19",
+      "id": 2,
+      "phone": "22-33-44",
+      "email": "443812682",
+      "companyId": 2
+    },
+    {
+      "name": "甜甜",
+      "id": 3,
+      "age": "20",
+      "phone": "22-33-44",
+      "email": "443812682",
+      "companyId": 3
+    },
+    {
+      "name": "乐乐",
+      "age": "18",
+      "id": 4,
+      "phone": "22-33-44",
+      "email": "443812682",
+      "companyId": 4
+    },
+    {
+      "name": "乐乐",
+      "age": "21",
+      "id": 5,
+      "phone": "22-33-44",
+      "email": "443812682",
+      "companyId": 4
+    }
+  ],
+  "userName": [
+    {
+      "name": "倪哥哥",
+      "phone": "15901379279",
+      "email": "443812682",
+      "education": "333",
+      "graduationscholl": "333",
+      "profession": "333",
+      "profile": "3333333我爱倪哥哥.倪哥哥也爱我！",
+      "id": 1,
+      "Character": "管理员",
+      "msg_state": true
+    },
+    {
+      "name": "海妹妹",
+      "age": "28",
+      "phone": "15901379279",
+      "email": "443812682",
+      "id": 2,
+      "companyId": 2,
+      "education": "本科",
+      "graduationscholl": "清华大学",
+      "profession": "前端",
+      "profile": "阳关总在风雨后",
+      "Character": "普通用户",
+      "msg_state": true
+    },
+    {
+      "name": "丽丽丽",
+      "age": "28",
+      "phone": "15901379279",
+      "email": "443812682",
+      "id": 3,
+      "companyId": 3,
+      "education": "本科",
+      "graduationscholl": "清华大学",
+      "profession": "前端",
+      "profile": "阳关总在风雨后",
+      "Character": "普通用户",
+      "msg_state": true
+    },
+    {
+      "name": "啊啊啊",
+      "phone": "15901379279",
+      "email": "443812682",
+      "education": "5",
+      "graduationscholl": "5",
+      "profession": "5",
+      "id": 4,
+      "Character": "普通用户",
+      "msg_state": true
+    },
+    {
+      "name": "哦哦哦",
+      "phone": "15901379279",
+      "email": "443812682",
+      "education": "ss",
+      "graduationscholl": "ss",
+      "profession": "ss",
+      "id": 5,
+      "Character": "普通用户",
+      "msg_state": true
+    },
+    {
+      "name": "童桂兰",
+      "phone": "18760743502",
+      "email": "443812682",
+      "education": "初中",
+      "graduationscholl": "蚂蚁小学",
+      "profession": "农名",
+      "id": 6,
+      "Character": "普通用户",
+      "msg_state": true
+    },
+    {
+      "name": "嗯嗯嗯",
+      "phone": "15901379279",
+      "email": "443812682",
+      "education": "大专",
+      "graduationscholl": "云南师范大学",
+      "profession": "幼师",
+      "id": 7,
+      "Character": "普通用户",
+      "msg_state": true
+    },
+    {
+      "name": "哈哈哈",
+      "phone": "15901379279",
+      "email": "443812682",
+      "education": "得到",
+      "graduationscholl": "得到",
+      "profession": "得到",
+      "id": 8,
+      "Character": "普通用户",
+      "msg_state": true
+    },
+    {
+      "name": "嘻嘻嘻",
+      "phone": "15901379279",
+      "email": "443812682",
+      "education": "dd",
+      "graduationscholl": "dd",
+      "profession": "dd",
+      "id": 9,
+      "Character": "普通用户",
+      "msg_state": true
+    },
+    {
+      "name": "呵呵呵",
+      "phone": "15901379279",
+      "email": "443812682",
+      "education": "是",
+      "graduationscholl": "是",
+      "profession": "是",
+      "id": 10,
+      "Character": "普通用户",
+      "msg_state": true
+    },
+    {
+      "name": "呃呃呃",
+      "phone": "15901379279",
+      "email": "443812682",
+      "education": "对对对",
+      "graduationscholl": "到的",
+      "profession": "到的",
+      "profile": "vv对对对对对对",
+      "id": 11,
+      "Character": "普通用户",
+      "msg_state": true
+    },
+    {
+      "name": "对对对",
+      "phone": "15901379279",
+      "email": "443812682",
+      "education": "对对对",
+      "graduationscholl": "到的",
+      "profession": "到的",
+      "profile": "vv对对对对对对",
+      "id": 12,
+      "Character": "普通用户",
+      "msg_state": true
+    },
+    {
+      "id": 13
+    }
+  ],
+  "companise": [
+    {
+      "id": 1,
+      "name": "Apple",
+      "description": "Apple is good!"
+    },
+    {
+      "id": 2,
+      "name": "Microsoft",
+      "description": "Microsoftis good!"
+    },
+    {
+      "id": 3,
+      "name": "Goodle",
+      "description": "Goodle is good!"
+    },
+    {
+      "id": 4,
+      "name": "Nuojy",
+      "description": "Nuoje is good!"
+    },
+    {
+      "id": 5,
+      "name": "Mi",
+      "description": "Mi is good!"
+    }
+  ],
+  "login": {
+    "userName": "龙美女",
+    "password": "*******",
+    "mate": {
+      "msg": "登录成功",
+      "status": 200
+    },
+    "token": "234567890sdfghjklcft678uijnm"
+  },
+  "menuList": [
+    {
+      "autName": "用户管理",
+      "path": "users",
+      "id": "125",
+      "order": 1,
+      "children": [
+        {
+          "id": "110",
+          "autName": "用户列表",
+          "path": "userList",
+          "childer": []
+        }
+      ]
+    },
+    {
+      "autName": "权限管理",
+      "path": "rights",
+      "id": "126",
+      "order": 2,
+      "children": [
+        {
+          "id": "120",
+          "autName": "权限列表",
+          "path": "Rights",
+          "childer": []
+        }
+      ]
+    },
+    {
+      "autName": "商品管理",
+      "path": "goods",
+      "id": "127",
+      "order": 1,
+      "children": [
+        {
+          "id": "130",
+          "autName": "商品列表",
+          "path": "goodsList",
+          "childer": []
+        }
+      ]
+    },
+    {
+      "autName": "订单管理",
+      "path": "ordes",
+      "id": "128",
+      "order": 1,
+      "children": [
+        {
+          "id": "140",
+          "autName": "订单列表",
+          "path": "ordesList",
+          "childer": []
+        }
+      ]
+    },
+    {
+      "autName": "数据管理",
+      "path": "repotrs",
+      "id": "129",
+      "order": 2,
+      "children": [
+        {
+          "id": "150",
+          "autName": "数据列表",
+          "path": "dataList",
+          "childer": []
+        }
+      ]
+    }
+  ],
+  "list": [
+    {
+      "id": 1,
+      "title": "11点吃饭",
+      "done": true
+    },
+    {
+      "id": 2,
+      "title": "2点午休",
+      "done": true
+    },
+    {
+      "id": 3,
+      "title": "5点吃饭",
+      "done": false
+    },
+    {
+      "id": 4,
+      "title": "8点跑步",
+      "done": true
+    },
+    {
+      "id": 5,
+      "title": "9点散步",
+      "done": false
+    },
+    {
+      "id": 6,
+      "title": "11点睡觉",
+      "done": false
+    },
+    {
+      "id": 7,
+      "title": "啦啦啦",
+      "done": true
+    }
+  ]
+}
