@@ -1,6 +1,4 @@
- ## jsonplaceholder.typiccode.com
- 
- 
+ ##  项目启动 命令： npm run json
  ## 一.获取所有用户的信息
  http://localhost:3000/users
 
@@ -34,13 +32,15 @@ http://localhost:3000/users?_age_get=18
 ## 十.获取年龄18-21之间的
 http://localhost:3000/users?_age_get=18&_age_let=20 
 
+## git 
+
 ## 自己伪造的数据
 ## Eaymoke
 
 ###  vuex中处理独立的模块 namespaced:true
 
 ## 让图片垂直居中
-  ******vertical-align: middle;
+  ******vertical-align: middle
 
 ## 点击搜索查询
 ```javascript
@@ -48,7 +48,7 @@ http://localhost:3000/users?_age_get=18&_age_let=20
 data(){
   return{
     filterValue:"",
-    customers:[],
+    customers:[], // 省市数据
   }
 }
 // v- for 循环的时候就不能单单的循环数据而是一个方法
@@ -60,15 +60,17 @@ methods:{
    })
   }
 }
+// v-for methods写一个循环的方法filtercity(数组, 输入的城市) {
+  return  
+}
 
 ```
-
 ## 改变数组内容的7种方法  
 pop 删除的那一个
 push  新的数组的长度
 shift  删除的那一个
 uhshift 新数组的长度
-splice  返或被删除的项目
+splice  返回被删除的项目
 sort 排序后的数组
 reverse 倒序后的数组
 ## 不改变原有数组
@@ -80,7 +82,6 @@ forEach
 map
 some
 revey
-
 ## vue 视图后台数据更新了，页面没有刷新！
 vue 里页后台更新了但是页面数据没有个刷新，怎么解决
 1.this.$set()
@@ -93,6 +94,7 @@ vue 里页后台更新了但是页面数据没有个刷新，怎么解决
 1. v-for 的优先级比v-if高,不可以同时使用
 
 ## 组件、插件 大全
+
 ## 克隆的组件 lodash
  1.npm i --save lodash 下载
  2.在需要用递归克隆的组件里引入组件
@@ -113,13 +115,6 @@ Vue.use(VueQuillEditor)
 2、 "plugins": ["@babel/plugin-syntax-dynamic-import"]
 3、之后在路由里配置
 const home=>import('@/compontents/home/home')
-
- ## 路由权限控制
-在客户端发送账号密码到服务端，服务端验证成功后返回token存储用户的权限，前端用Cookie把token存储在本地，在路由跳转(router.beforeEach)中判断是否存在token，另外前端可以通过token请求服务端获取userInfo，登录成功后在Vuex中存储着用户的信息(用户名，头像，注册时间等等)
-
-权限控制
-就是在路由跳转（router.beforEach）中判断token中的权限和要去往(to)页面的路由信息(router meta)中配置的权限是否匹配，同时我们的侧边栏也是根据权限动态生成的，当所登录的账号没有权限访问时，就不显示在侧边栏中（例如访客登录就无法看到编辑器的侧边栏选项），这样用户既看不到侧边栏选项，又无法直接访问到，双重控制更安全。
-
 ....
 ###  数据请求的时候get和set的区别
 ### GET /form.html?name=haha&&age=99
@@ -153,12 +148,63 @@ const home=>import('@/compontents/home/home')
 let xhr = new XMLHttpRequest(); 
         xhr.open(get,'data.json')
         xhr.onreadystatechange = function(){
-            if(xhr.onreadys === 4&&xhr.status ===200 ){
+            if(xhr.onreadystate === 4 && xhr.status ===200 ){
                 console.log(data.responseTest);
             }
         }
         xhr.send()
 ```
+## promise是什么？
+1. promise 是解决异步编程问题的，
+       它有三个转态：A初始:pending B成功的转态: fufilled C失败的转态：rejected D：默认
+       是把异步的代码变成同步的一种编程思想。async await
+       1.promise 其实是一个类，是通过new 的方式去创建一个实例，返回的是一个对象。
+       2.这个实例是一个回掉函数，这个函数有两个参数，一个是成功的回掉，一个是失败的回掉，这个两个函数谁去执行由我们自己决定
+       3.多个异步如果有顺序关系会导致回掉地狱
+```javascript
+const Promise = new promise(resolve, reject); 
+if(200) {
+  resolve(value)
+} else {
+  rejest(error)
+}
+        
+```
+### active-class 是router-link的终端属性，用来选中样式的切换。当router-link标签被选中的时候样式会      
+## 路由权限控制 ??
+在客户端发送账号密码到服务端，服务端验证成功后返回token存储用户的权限，
+前端用Cookie把token存储在本地，在路由跳转(router.beforeEach)中判断是否存在token，
+另外前端可以通过token请求服务端获取userInfo，登录成功后在Vuex中存储着用户的信息(用户名，头像，注册时间等等)
+
+权限控制 ??
+路由首位就是只要页面一跳转就会触发的一个钩子函数，我们称为路由守卫Vue给我们提供了三种路由守卫，
+全局守卫
+router.beforeEach 全局守卫
+router.beforeResolve：全局解析守卫。
+router.afterEach 全局后置钩子 
+组件内守卫：
+beforeRouteEnter
+beforeRouteUpdate
+beforeRouteLeave
+
+路由独享守卫：
+beforeEnter
+在路由守卫（router.beforEach）中判断token中的权限和要去往页面的路由信息(router meta)中配置的权限是否匹配，
+同时我们的侧边栏也是根据权限动态生成的，当所登录的账号没有权限访问时，就不显示在侧边栏中（例如访客登录就无法看到编辑器的侧边栏选项），
+这样用户既看不到侧边栏选项，又无法直接访问到，双重控制更安全。
+
+## Vue的生命周期是什么？
+1.new vue实例从创建到销毁的过程,就是生命周期。也就是从开始创建、初始化数据、编译模板、挂载Dom→渲染、更新→渲染、卸载等一系列过程,我们称这是 Vue 的生命周期。
+它有8个钩子函数
+beforcreate
+created
+beformount
+mounted
+befupdata
+updatad
+befordestroy
+destroyed
+ 
 ## Vue 路由中有哪几种传参的方法？
 1. 携带$router.push 编程式跳转 携带参数跳转 getList(item.id)
     很显然，需要在path中添加/:id来对应 $router.push 中path携带的参数。在子组件中可以使用来获取传递的参数值。
@@ -243,9 +289,10 @@ let xhr = new XMLHttpRequest();
  + abstract 支持所有Javascript 运行的环境包括 Node 服务端，如果发现没有浏览器的API，路由会强制进入这个模式
 
  ## 
-## 结合Element搭建搭建的后台管理系统
+## 结合Element搭建搭建的后台管理系统 v-slot-row
 ## 不明白的知识整理？
-## 在布局的过程中，页面被拉小的时候页面不够会导致，元素挪到第二行，解决这个问题办法是给全局的html,body,app和设置一个最小宽度min-width:1366px;(解决页面宽度不够的时候会强制让那个页面宽度为1366px,这样就不会出现折行的问题)
+## 在布局的过程中，页面被拉小的时候页面不够会导致，元素挪到第二行，
+## 解决这个问题办法是给全局的html,body,app和设置一个最小宽度min-width:1366px;(解决页面宽度不够的时候会强制让那个页面宽度为1366px,这样就不会出现折行的问题)
 
 ### 处理Eslint的语法报错问题
 > 在项目的根目录中创建一个文件.prettrerc是一个json格式的数据
@@ -1923,7 +1970,7 @@ async remove(id){
 > git checkout -b order
 > git push -u origin order
 
-````
+````javascript
 <template>
  <!-- 面包屑导航区域 -->
 <el-breadcrumb separator="/">
@@ -2175,6 +2222,7 @@ const result = _.merge(res.data,this.options)
 > git merge report
 > git push
 > git reset --mixed 代码回滚，提交错的代码回滚到工作区
+   (如果只回滚一个文件就只需 git reset 1.js)
 > git reset --hard 代码回滚，提交错的代码回滚到缓存区
 > git reset --soft 代码回到版本区
 > git log 提交的操作
@@ -2264,14 +2312,9 @@ vant 在真实项目中的用法：下载好以后有两种方式
 
 
 面试题：
-为什么vue组件中的里的data 不是一个对象而是一个函数？
-1.如果两个实例引用同一个对象，当一个实例属性发生改变时，另一个实例也会随之改变
-  只有两个实例有自己的作用域时，才不会互相干扰。
-2.这是因为就JavaScript的特性所致，在compontent中，data必须以函数的形式存在，不可以是对象。
-总结：组件中的data写成一个函数，数据以函数返回值的形式定义，这样复用组件的时候，都会返回一个新的data，
-     自己的作用域数据不会相互干扰
-
-
+为什么vue.js中的里的data 不是一个对象而是一个函数？
+目的是为了确保自己数据的独立性，只有data是函数的时候的，每个组件都有自己独立的作用域不会互相干扰
+(在js里只有function才有私有作用域，对象{}和if()不构成作用域)
 ### Vant + Vue仿照Boos直聘
 1.下载vant后按需引入，直接安装按需引入
 2.在项目根目录下找到.babelrc
@@ -2293,7 +2336,10 @@ vant 在真实项目中的用法：下载好以后有两种方式
 箭头函数相对于普通函数语法更简洁优雅
 箭头函数不能当做Generator函数,不能使用yield关键字(python)
 
-
+### 1.每个函数数据类型天生自带一个属性prototype，值为一个对象用来存储实例上公共的属性或者方法
+### 2.在类的原型上Fn.prototype,天生自带的属性constructor，存储的是当前类或者函数本身
+### 3.每一个对象天生自带一个属性__proto__指向的是自己所属类的原型
+### 内置的
 
 ###  css 中会遇到的问题
 
@@ -2393,9 +2439,6 @@ Vue.component('Parent',{
      <Child/>
      </div>
      `
-     
-
-
 }),
 //子组件
 Vue.component('Child',{
@@ -2411,13 +2454,7 @@ Vue.component('Child',{
     
     </div>
     `
-     
-
-
 })
-
-
-
 let vm = new Vue({
   el:'#app',
   data(){
@@ -2437,7 +2474,6 @@ let vm = new Vue({
   `
 })
 ```
-
 ### 点击返回 && 监听路由如果是首页就把返回隐藏
 ````javascript
 <span @click= "goBack" v-show="flag">返回</span>
@@ -2461,16 +2497,11 @@ let vm = new Vue({
 
    }
  }
-
-***** 会遇到的问题，因为在个别组件里还是会有检测不到路由的改变，导致search组件里的头部的返回按钮还在,组件没有跟新完检测不到路由解决的办法就是在 created钩子函数里在做一次处理 
-
+***会遇到的问题，因为在个别组件里还是会有检测不到路由的改变，导致search组件里的头部的返回按钮还在,组件没有跟新完检测不到路由解决的办法就是在 created钩子函数里在做一次处理 
 created(){
   this.flag = $router.path ==='/home' ? true : false;
 }
 ````
- 
-
-
 ## 视口分为布局视口 和 理想视口
  + meta 视口标签
 ## 移动端开发选择（移动端主流方案）
@@ -2527,7 +2558,6 @@ created(){
 
 }
 
- 
 ```
 ## rem 适配
 github: https://github.com/amfe/lib-flexible
@@ -2535,3 +2565,91 @@ github: https://github.com/amfe/lib-flexible
 ## Ps 应用   
 443812682@qq.com 1761159159
 在线代码格式化 （翻译别人的代码）
+
+## Flex 
+1. 什么是Flex布局？
+   flex 是 Flexible Box 的缩写 Flex 布局表示弹性布局，可以为盒状模型提供最大的灵活性。
+2. 什么是容器？
+采用Flex布局元素， 称为Flex容器（Flex Container）简称“容器”，它里面的所有元素简称“项目”（Flex itemm）
+3. Flex 父级的属性有6个
+   1. flex-direction：row 属性设置容器主轴的方向
+   row: 默认值，表示沿水平方向，由左到右。
+   row-reverse ：表示沿水平方向，由右到左
+   column：表示垂直方向，由上到下
+   column-reverse:表示垂直方向，由下到上
+   2. flex-wrap: 设置元素是否换行
+    默认onwrap  不换行
+          wrap  换行
+        wrapreverse-反向换行
+   3. flew-flow： 复合属性
+      flex-direction和flex-wrap 
+      flew-flow: row wrap
+      flew-flow: column wrap
+   4. justify-content：设置主轴上元素的排列方式
+      space-between -两端对齐-靠着容器壁-剩余空间平分
+      space-around - 分散对齐-不靠着容器壁
+      space-evenly - 平均对齐-不靠着容器壁
+   5. align-items： 设置侧轴上的元素排列方式（单行）
+      justify-content：center 
+      align-items: align-items 让元素在x轴正中间对齐，需要y轴中间对齐就改变轴的加一个flex-direction: column
+   6. align-content: 设置主轴上元素的排列方式（多行）| 
+          center | 
+      space-between | 
+      space-around |
+   Flex里子项的属性
+   1. flex：Number 默认值是0  平均分配剩余空间
+   2. align-self: 控制子项侧轴对齐方式 默认值为 auto
+   3. order: 默认值为 0 可以调换子元素的前后位置
+## rem px em 的区别
+1. px 实际上就是像素，用px设置字体大小时比较稳定和精准。像素px是但相对于显示器的屏幕的分辨率而言的
+2. rem 根据元素《html》的字体大小变化，这样就意味着在根元素确定一个参考值
+   通俗的说，1rem = html 的 font-size 值**
+   这段代码。a 标签的 font-size 值为 0.5rem，实际就是 100px*0.5=50px。
+   Ahtml{font-size:100px;} a{font-size:.5rem;}
+
+
+1. 路由之间是怎么跳转的？有哪些方式
+2. vue-router怎么配置路由
+3. vue-router的钩子函数都有哪些
+4. 路由传值的方式有哪几种
+5. 怎么定义vue-router的动态路由?怎么获取传过来的动态参数? pas puery
+6. Vue的路由实现模式：hash #模式和history模式 H5提供的API
+7. 请说出路由配置项常用的属性及作用（必会）
+8. 编程式导航使用的方法以及常用的方法（必会） this.$router.push('..',pas) back() go(-1) replace() forward()
+9. Vue如何去除URL中的#  mode: 'history'
+
+## 子传传父是单向数据流
+可以用两种方法
+1. 事件传递
+ ```javascript
+父组件chnag(name){
+  console(name, )
+}
+在子组上自定义一个事件名onchnage()，在自己的组件里用this.$emit('自定义事件名', this.nmae, )
+ ```
+2. props
+```javascript
+<chiv :gitname="gitname" ><chi/>
+
+```
+### 浏览器的渲染机制
+1. 先解析获取到HTML,生成DOM树。解析CSS，生成CSS树
+2. 将DOM树和CSS树进行结合，生成渲染树。render tree
+3. 根据生成的渲染树，进行回流得到节点的几何信息（位置，大小）
+4. 重绘：根据渲染树以及回流的信息，得到节点的绝对像素（像素， 背景， 外观）
+5. 浏览器会将各层信息发给Gpu,展示在页面上
+
+## 回流
+浏览器会把获取的HTML代码解析成一个DOM数，html中的每个元素都是DOM树的一个节点，根据节点也就是document对象。在渲染的过程一部分
+因为元素的规模，尺寸，布局，显示，隐藏等改变需要重新构建，这就是回流。（改变大小， 结构， 内容 ， 字体大小发生改变）
+## 重绘
+在渲染树中的一些元素需要更新属性，而这些属性只影响元素的外观，风格，不影响布局，就称为重绘（改变一下颜色，外观发生改变）
+在新人的过程
+**** 回流会引起重绘，重绘不一定引起回流
+回流会导致页面重排，会影响性能
+
+## 怎么避免回流和重绘
+尽量避免过多DOM元素的增删改
+避免使用table布局
+
+### 可视化图片ch
